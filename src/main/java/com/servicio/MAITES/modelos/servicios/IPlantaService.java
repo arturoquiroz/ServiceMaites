@@ -8,5 +8,7 @@ public interface IPlantaService {
 
 	public List<planta> findAll();
 
-	public planta findOne(Long id);
+	public planta findOne(int id);
+	
+	public List<String> findAllId();
 }

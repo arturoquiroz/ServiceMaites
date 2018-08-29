@@ -22,8 +22,12 @@ public class PlantaServiceImpl implements IPlantaService{
 	}
 
 	@Override
-	public planta findOne(Long id) {
+	public planta findOne(int id) {
 		return plantadao.findOne(id);
+	}
+	
+	public List<String> findAllId(){
+		return plantadao.finAllId();
 	}
 
 }

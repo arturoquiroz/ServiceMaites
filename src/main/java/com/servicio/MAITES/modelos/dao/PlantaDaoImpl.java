@@ -22,8 +22,13 @@ public class PlantaDaoImpl implements IPlantaDao{
 	}
 
 	@Override
-	public planta findOne(Long id) {
+	public planta findOne(int id) {
 		return em.find(planta.class, id);
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<String> finAllId() {
+		return em.createNativeQuery("select idplanta, versiondeactualizacion from planta").getResultList();
+	}
 }

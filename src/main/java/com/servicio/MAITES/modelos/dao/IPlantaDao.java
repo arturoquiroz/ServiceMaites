@@ -8,6 +8,7 @@ public interface IPlantaDao {
 	
 	public List<planta> findAll();
 
-	public planta findOne(Long id);
+	public planta findOne(int id);
 
+	public List<String> finAllId();
 }
